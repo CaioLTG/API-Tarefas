@@ -23,11 +23,13 @@ public class TarefaController {
         this.tarefaService = tarefaService;
     }
 
+    //Criando uma nova tarefa
     @PostMapping
     List<Tarefa> create(@RequestBody Tarefa tarefa) {
         return tarefaService.create(tarefa);
     }
 
+    //Exibindo todas as tarefas com GET
     @GetMapping
     List<Tarefa> list() { // não precisa passar parâmetro por causa do get
         return tarefaService.list();
